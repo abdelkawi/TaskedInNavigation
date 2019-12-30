@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_bottom_nav"
+    app:startDestination="@id/chat">
+
+
+    <fragment
+        android:id="@+id/chatRoom"
+        android:name="com.example.taskedinoneactivitynavtest.ChatRoom"
+        tools:layout="@layout/chat_room_fragment"
+        android:label="ChatRoom" />
+    <fragment
+        android:id="@+id/chat"
+        android:name="com.example.taskedinoneactivitynavtest.RecentChat"
+        android:label="recent chat"
+        tools:layout="@layout/recent_chat_fragment">
+        <action
+            android:id="@+id/action_recentChat_to_chatRoom"
+            app:destination="@id/chatRoom" />
+    </fragment>
+    <fragment
+        android:id="@+id/inbox"
+        android:name="com.example.taskedinoneactivitynavtest.Inbox"
+        tools:layout="@layout/inbox_fragment"
+        android:label="Inbox" />
+    <fragment
+        android:id="@+id/createTask"
+        android:name="com.example.taskedinoneactivitynavtest.CreateNewTask"
+        tools:layout="@layout/create_new_task_fragment"
+        android:label="CreateNewTask" />
+    <fragment
+        android:id="@+id/sent"
+        android:name="com.example.taskedinoneactivitynavtest.SentTasks"
+        tools:layout="@layout/sent_tasks_fragment"
+        android:label="SentTasks" />
+    <fragment
+        android:id="@+id/reports"
+        tools:layout="@layout/reports_fragment"
+        android:name="com.example.taskedinoneactivitynavtest.Reports"
+        android:label="Reports" />
+</navigation>
